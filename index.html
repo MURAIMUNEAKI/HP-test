@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ===== META: 基本設定 ===== -->
+  <title>極上のすき焼きを食卓へ｜おしゃれなお肉屋さん｜厳選黒毛和牛専門店</title>
+  
+  <!-- ===== SEO: meta基本設定 ===== -->
+  <meta name="description" content="厳選された黒毛和牛と秘伝の割り下。すき焼きが最高に美味しい「おしゃれなお肉屋さん」が贈る、至福の食体験。ご自宅でプロの味を再現するためのこだわりのお肉を全国へお届けします。">
+  <meta name="keywords" content="すき焼き, 黒毛和牛, お肉屋さん, 精肉店, お取り寄せ, 極上肉, おしゃれ, グルメ">
+  <meta name="author" content="おしゃれなお肉屋さん">
+  <link rel="canonical" href="https://example.com/sukiyaki-shop/">
+
+  <!-- ===== SEO: OGP (SNS共有用) ===== -->
+  <meta property="og:title" content="極上のすき焼きを食卓へ｜おしゃれなお肉屋さん">
+  <meta property="og:description" content="すき焼きが最高に美味しい。厳選された黒毛和牛をあなたに。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/sukiyaki-shop/">
+  <meta property="og:site_name" content="おしゃれなお肉屋さん">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- ===== SEO: 構造化データ (JSON-LD) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "おしゃれなお肉屋さん",
+    "description": "厳選された黒毛和牛と秘伝の割り下を提供する精肉店。",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "東京都",
+      "addressRegion": "千代田区",
+      "addressCountry": "JP"
+    }
+  }
+  </script>
+
+  <!-- ===== STYLE: CSS変数定義 ===== -->
+  <style>
+    :root {
+      --bg-color: #f5f1e8;
+      --accent-green: #6b9b3d;
+      --deep-green: #3d4a2a;
+      --gold: #c19a4b;
+      --text-color: #3d4a2a;
+      --white: #ffffff;
+      --radius: 20px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    <!-- ===== STYLE: リセット・共通 ===== -->
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    h1, h2, h3 { font-weight: bold; margin-bottom: 1.5rem; }
+    button, .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: var(--accent-green);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover { background: var(--deep-green); }
+
+    <!-- ===== STYLE: ナビゲーション ===== -->
+    header { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .menu-toggle { display: none; font-size: 24px; cursor: pointer; }
+
+    <!-- ===== STYLE: ヒーローセクション ===== -->
+    .hero { text-align: center; padding: 100px 20px; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 4rem); color: var(--deep-green); }
+
+    <!-- ===== STYLE: 各セクション共通 ===== -->
+    section { padding: 80px 0; }
+    .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+
+    <!-- ===== STYLE: カード・グリッド ===== -->
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .card { background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+    <!-- ===== STYLE: フォーム ===== -->
+    .form-group { margin-bottom: 20px; }
+    input, textarea { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 10px; }
+
+    <!-- ===== STYLE: フッター ===== -->
+    footer { background: var(--deep-green); color: var(--white); padding: 40px 0; text-align: center; }
+
+    <!-- ===== STYLE: アニメーション ===== -->
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .fade-in.is-visible { opacity: 1; transform: translateY(0); }
+
+    <!-- ===== STYLE: レスポンシブ (タブレット・スマホ) ===== -->
+    @media (max-width: 767px) {
+      .menu-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 80px; left: 0; width: 100%; background: var(--bg-color); flex-direction: column; align-items: center; padding: 20px; }
+      .nav-links.active { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== SECTION: ナビゲーションバー ===== -->
+  <nav class="container">
+    <header>
+      <div style="font-size: 1.5rem; font-weight: bold;">おしゃれなお肉屋さん</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="nav">
+        <li><a href="#about">私たちについて</a></li>
+        <li><a href="#features">こだわり</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </header>
+  </nav>
+
+  <!-- ===== SECTION: ヒーロー ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>すき焼きが、<br>最高に美味しくなるお店。</h1>
+      <p style="font-size: 1.2rem; margin-bottom: 30px;">職人が厳選した黒毛和牛と、代々受け継がれた秘伝の割り下。<br>心温まる食卓を、あなたにお届けします。</p>
+      <a href="#contact" class="btn">予約・購入はこちら</a>
+    </div>
+  </section>
+
+  <!-- ===== SECTION: About / 概要 ===== -->
+  <section id="about" class="container fade-in">
+    <h2 class="section-title">食卓に、至福のひとときを</h2>
+    <p>「おしゃれなお肉屋さん」は、単にお肉を売るだけの場所ではありません。私たちは、お客様の食卓が笑顔で溢れるような「体験」を提供したいと考えています。特に看板メニューである「すき焼き用セット」は、多くのお客様から「これまでのすき焼きの概念が変わった」というお声をいただいております。厳選された部位、絶妙な厚み、そして家庭で簡単にプロの味が再現できる秘伝のタレ。私たちは、お肉の可能性を追求し続けます。</p>
+  </section>
+
+  <!-- ===== SECTION: 特徴・強み ===== -->
+  <section id="features" style="background: #e9e4d9;">
+    <div class="container">
+      <h2 class="section-title">選ばれる3つの理由</h2>
+      <div class="grid">
+        <div class="card fade-in">
+          <h3>厳選黒毛和牛</h3>
+          <p>全国の牧場から最高品質の黒毛和牛のみを仕入れています。霜降りの美しさと、とろけるような脂の甘みはまさに芸術品です。</p>
+        </div>
+        <div class="card fade-in">
+          <h3>秘伝の割り下</h3>
+          <p>創業から継ぎ足しで作られる割り下は、深みのある甘さと醤油の香ばしさが絶妙。お肉の旨味を最大限に引き立てる黄金比です。</p>
+        </div>
+        <div class="card fade-in">
+          <h3>新鮮直送</h3>
+          <p>カットしたてのお肉を真空パックで即日発送。鮮度を落とさず、最高の状態でお客様のもとへお届けすることにこだわっています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION: お問い合わせフォーム ===== -->
+  <section id="contact" class="container">
+    <h2 class="section-title">お問い合わせ</h2>
+    <form id="contactForm" style="max-width: 600px; margin: 0 auto;">
+      <div class="form-group">
+        <input type="text" placeholder="お名前" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="メールアドレス" required>
+      </div>
+      <div class="form-group">
+        <textarea rows="5" placeholder="お問い合わせ内容"></textarea>
+      </div>
+      <button type="submit" style="width: 100%;">送信する</button>
+    </form>
+  </section>
+
+  <!-- ===== SECTION: フッター ===== -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 おしゃれなお肉屋さん All Rights Reserved.</p>
+      <p>東京都千代田区肉町 1-2-3 | 営業時間: 10:00 - 19:00</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== JS: ハンバーガーメニュー =====
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('active');
+    }
+
+    // ===== JS: スクロールアニメーション =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ===== JS: スムーススクロール =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // ===== JS: フォーム送信処理 =====
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('お問い合わせありがとうございます。担当者より折り返しご連絡いたします。');
+    });
+  </script>
+</body>
+</html>
